@@ -1,0 +1,23 @@
+# MÁQUINAS DE ESTADOS FINITOS
+
+- Existem basicamente dois tipos de MEF:
+    - os transdutores
+    - os reconhecedores de linguagem
+
+Os transdutores são máquinas com entrada e saída;
+Os reconhecedores são máquinas com apenas duas saídas possíveis. Aceita a entrada ou rejeita a entrada.
+
+As linguagens reconhecidas por MEF são denominadas linguagens regulares.
+Uma característica importante nas MEFs é que sua memória é limitada e organizada em torno do conceito de estados.
+
+As MEF do tipo reconhecedor de linguagem são conhecidos como AUTÔMATOS FINITOS.
+As MEF do tipo transdutor são conhecidos como AUTÔMATOS FINITOS COM SAÍDA.
+
+Ex.: Máquina de bebidas.
+
+Simular o funcionamento de uma máquina de bebidas através de uma Máquina de Estados.
+    - o valor da bebida é de R$ 1,5;
+    - Não dá troco;
+    - uma vez recebido o valor a máquina deve liberar a bebida;
+    - uma única entrada para moedas.
+
