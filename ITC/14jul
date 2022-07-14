@@ -21,3 +21,11 @@ Simular o funcionamento de uma máquina de bebidas através de uma Máquina de E
     - uma vez recebido o valor a máquina deve liberar a bebida;
     - uma única entrada para moedas.
 
+Tabular todas as entradas possíveis:
+    - uma moeda de $0,5 e uma de $1;
+    - uma moeda de $1 e uma de $0,5;
+    - três moedas de $0,5.
+
+Cada entrada acima gera um estado:
+    - q1 = a máquina recebeu $0,5;
+    - q2 = a máquina recebeu $1.
