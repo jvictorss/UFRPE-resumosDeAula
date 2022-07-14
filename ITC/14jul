@@ -76,3 +76,26 @@ Def3 = um formalismo operacional ou reconhecedor.
             - Divisão de células. Cada uma delas armazena um símbolo que pertence ao alfabeto de entrada.
             - Não é possível gravar sobre a fita.
             - A informação de entrada (palavra a ser processada) ocupa toda a fita.
+
+        - UNIDADE DE CONTROLE:
+            - Possui um número finito e pré-definido de estados (controle finito)
+            - Lê um símbolo da fita de cada vez;
+            - Após a leitura, move-se uma célula para a direita
+            - Começa sempre da esquerda para a direita. Ou se move para a direita ou permanece no mesmo lugar.
+        
+        - PROGRAMA: 
+            - É uma função parcial, tal que dependendo do estado corrente e do símbolo lido, determina o novo estado do autômato.
+        
+        - FORMALISMO: 
+            - O AFD M é uma quintupla ordenada: 
+                M = (E, Q, sigma, q0, F)
+            
+            - Onde: 
+                - 
+                - 
+                - 
+                - sigma: programa ou função de transição (QxE - > Q - pares ordenados indo para Q. Pares ordenados que vão para apenas um estado.)
+                - Que é uma função Total. Supondo que sigma é definida para um estado p e um símbolo a, resultando num estado q, então: 
+                            sigma(p,a) = q
+                - Que é uma transição do autômato.
+                - q0 = é um símbolo distinguido de Q denominado estado inicial
