@@ -27,5 +27,52 @@ Tabular todas as entradas possíveis:
     - três moedas de $0,5.
 
 Cada entrada acima gera um estado:
+    - q0 = estado de espera para inicar o programa.
     - q1 = a máquina recebeu $0,5;
     - q2 = a máquina recebeu $1.
+
+Q0 -> q1 (recebeu 0,5) -> (espera $1 para o final) -> qf
+Q0 -> q1 (recebeu 0,5) -> (recebeu $0,5) -> q2 (espera $0,5 para o final) -> qf
+Q0 -> q2 (recebeu $1) -> (espera $0,5 para o final) -> qf
+
+O autômato finito é exatamente uma máquina estática que tem UM ÚNICO PROPÓSITO. Para qualquer outra coisa, a máquina não funciona.
+
+Problema Homem + Cabra + Repolho + Lobo
+1. Lobo não pode ficar só com a cabra;
+2. Cabra não pode ficar só com o repolho. 
+
+Resolução (minha):
+
+HLRC -> [];
+H+C -> C FICA -> [LR] -> [HC]-> H VOLTA -> [LRH] [C] -> H + L -> [R] [LHC] -> H+C VOLTA -> [RHC] [L] -> H+R -> [C] [HRL] -> H VOLTA -> [HC] [LR] -> H+C -> [] [HRLC]. FIM
+
+Cada estado é representado por um conjunto e cada transição possível é representado por uma seta com os ocupantes do barco. Os estados iniciais e finais são diferenciados. 
+O espaço de estados pode ser representado por um grafo dirigido em que os vértices são os estados e as arestas as transições.
+Pela figura vemos que existem infinitas soluções.
+Duas, porém, são mínimas: cslcrsc e csrclsc
+Definimos o alfabeto E = {s,l,c,r} e as combinações sobre E são as palavras.
+
+### AUTÔMATO FINITO: 
+Def1 = é um sistema de estados finitos (predefinidos) que constitui um modelo computacional sequencial
+Def2 = é uma estrutura matemática constituída por três tipos de entidades:
+    - um conjunto finito de estados
+    - 
+    - 
+
+Def3 = um formalismo operacional ou reconhecedor.
+
+### CLASSIFICAÇÃO AF
+- Determinístico: dependendo do estado e do símbolo lido o sistema só poderá assumir 1 estado.
+- Não-determinístico: poderá assumir um conjunto de estados.
+- Com movimentos vazios: dependendo do estado e sem ler um símbolo o sistema pode assumir um novo ou um conjunto existente.
+
+### AF DETERMINÍSTICO: 
+- Pode ser visto como uma máquina constituída de três partes: 
+    - Fita: dispositivo de entrada;
+    - Unidade de controle: reflete o estado corrente da máquina
+    - Programa, Função Programa ou Função de transição: função que comanda as leituras e define o estado da máquina.
+
+        - FITA: 
+            - Divisão de células. Cada uma delas armazena um símbolo que pertence ao alfabeto de entrada.
+            - Não é possível gravar sobre a fita.
+            - A informação de entrada (palavra a ser processada) ocupa toda a fita.
