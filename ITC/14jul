@@ -99,3 +99,26 @@ Def3 = um formalismo operacional ou reconhecedor.
                             sigma(p,a) = q
                 - Que é uma transição do autômato.
                 - q0 = é um símbolo distinguido de Q denominado estado inicial
+        
+        - DIAGRAMA:
+            - O autômato pode ser definido através de um diagrama, no qual: 
+                - Estados são nodos;
+                - Transições são arestas ligando os nodos;
+                - Estados iniciais e finais são representados de forma distinta dos demais;
+                - Transições paralelas são representados por arestas duplas.
+                - Uma forma alternativa de representação é através de uma tabela de dupla entrada. Por exemplo, para uma transição do tipo sigma(p,a)=q corresponde a tabela
+                [sigma][a][---]
+                [p]        [q] [---]
+                [q]       [---] [---]
+        
+        - COMPUTAÇÃO:
+            - uma computação sobre um autômato finito para uma palavra W, consiste na sucessiva aplicação da função programa para cada símbolo de w (da esquerda para a direita) até ocorrer uma condição de parada.
+            - O autômato finito não possui memória por isso para armazenar as instrução usamos o conceito de estados.
+        - Ex. de computação;
+            - O autômato finito aa ou bb como subpalavra.
+            - Considere a seguinte linguagem sobre o alfabeto {a,b}
+                - L1 = {w | w possui aa ou bb como subpalavra}
+            - O autômato finito: 
+                - M1 = {{a,b}, {q0, q1, q2, qr}, q0 {qr}}
+            - dada a palavra w = abba diga se ela é aceita ou não pelo AFD.
+            - Mostre a computação feita.
